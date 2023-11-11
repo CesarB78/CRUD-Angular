@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,inject} from '@angular/core';
+import{AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CRUD-Angular';
+
+  firestore: AngularFirestoreModule = inject(AngularFirestoreModule);
+
 }
